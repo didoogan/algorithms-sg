@@ -16,11 +16,17 @@
 //     return result
 // }
 
-function reverse(str) {
-    const arr = str.split("")
-    arr.reverse()
+// function reverse(str) {
+//     const arr = str.split("")
+//     arr.reverse()
 
-    return arr.join("")
+//     return arr.join("")
+// }
+
+function reverse(str) {
+    return str.split("").reduce((result, letter) => result.unshift(letter) && result, []).join("");
 }
 
 module.exports = reverse;
+
+console.log(reverse("dich"));
